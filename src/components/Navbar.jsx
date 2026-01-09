@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // eslint-disable-line no-unused-vars
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Navbar = () => {
         <a href="#" className="logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           Portfolio<span className="dot">.</span>
         </a>
-        
+
         <div className={`nav-links \${isMenuOpen ? 'active' : ''}`}>
           <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>About</a>
           <a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}>Projects</a>

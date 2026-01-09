@@ -1,36 +1,35 @@
-import { useEffect, useRef } from 'react';
 import heroImage from '../assets/hero.png';
 
 const Hero = () => {
-    return (
-        <section id="hero" className="hero-section">
-            <div className="container hero-container">
-                <div className="hero-content">
-                    <span className="badge">Welcome to my portfolio</span>
-                    <h1 className="hero-title">
-                        Hi, I'm <span className="gradient-text">Pawan</span> <br />
-                        Creative Developer
-                    </h1>
-                    <p className="hero-description">
-                        I craft digital experiences with a focus on aesthetics and performance.
-                        Transforming ideas into reality through modern web technologies.
-                    </p>
-                    <div className="hero-actions">
-                        <a href="#projects" className="btn btn-primary">View Work</a>
-                        <a href="#contact" className="btn btn-outline">Contact Me</a>
-                    </div>
-                </div>
+  return (
+    <section id="hero" className="hero-section">
+      <div className="container hero-container">
+        <div className="hero-content">
+          <span className="badge">Welcome to my portfolio</span>
+          <h1 className="hero-title">
+            Hi, I'm <span className="gradient-text">Pawan</span> <br />
+            Creative Developer
+          </h1>
+          <p className="hero-description">
+            I craft digital experiences with a focus on aesthetics and performance.
+            Transforming ideas into reality through modern web technologies.
+          </p>
+          <div className="hero-actions">
+            <a href="#projects" className="btn btn-primary">View Work</a>
+            <a href="#contact" className="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
 
-                <div className="hero-image-wrapper">
-                    <div className="blob blob-1"></div>
-                    <div className="blob blob-2"></div>
-                    <div className="image-container glass-card">
-                        <img src={heroImage} alt="Pawan" className="hero-image" />
-                    </div>
-                </div>
-            </div>
+        <div className="hero-image-wrapper">
+          <div className="blob blob-1"></div>
+          <div className="blob blob-2"></div>
+          <div className="image-container glass-card">
+            <img src={heroImage} alt="Pawan" className="hero-image" />
+          </div>
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .hero-section {
           min-height: 100vh;
           display: flex;
@@ -178,8 +177,8 @@ const Hero = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Hero;
