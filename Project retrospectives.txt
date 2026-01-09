@@ -1,0 +1,48 @@
+Project Retrospective: Personal Portfolio Website
+Overview
+This document summarizes the development journey of building a modern, responsive personal portfolio website using Vite + React. It details the work accomplished, technical challenges encountered during the process, and the specific solutions implemented to overcome them.
+
+Work Accomplished
+Project Initialization: Scaffolding a new React application using Vite for a fast and lightweight development experience.
+Design System Implementation: Created a custom design system (
+index.css
+) with:
+Dark mode centric color palette (Slate/Indigo/Pink).
+Modern typography using Google Fonts (Outfit & Inter).
+Glassmorphism utility classes for a premium UI feel.
+Component Development:
+Navbar: Responsive, sticky navigation with blur effects.
+Hero: Dynamic introduction with floating animations and profile image integration.
+About: Skills grid and professional summary.
+Projects: Scalable component displaying 16+ detailed project cards with hover effects.
+Contact: Functional-looking form and social media integration.
+Deployment & Domain: Configured Netlify for continuous deployment and successfully mapped a custom domain (gadi.info).
+Challenges & Solutions
+1. Environment Configuration
+Challenge: The local environment initially lacked Node.js/npm and Git/Xcode Developer Tools, preventing the project from starting. Solution:
+
+Identified the missing binaries via terminal checks.
+Paused execution to guide the user through the installation of Node.js and Xcode CLI tools (xcode-select --install).
+Verified installation before proceeding with the build.
+2. Version Control Authentication
+Challenge: Pushing code to GitHub required authentication. The automated agent environment cannot handle interactive prompts (username/password inputs) securely. Solution:
+
+Initialized the local repository and configured the remote origin programmatically.
+Instructed the user to execute the final git push command manually in their terminal to handle the secure authentication handshake.
+3. Deployment Tooling
+Challenge: The netlify-cli was not installed on the system, which initially blocked the plan for a CLI-based deployment. Solution:
+
+Pivoted to a Continuous Deployment (CD) workflow.
+Created a 
+netlify.toml
+ configuration file to define build settings (npm run build) and redirects.
+Guided the user to connect their GitHub repository directly to Netlify's UI, ensuring automatic updates on every future push.
+4. Custom Domain & DNS Propagation
+Challenge: After configuring the custom domain (gadi.info), the user encountered "Under Construction" pages (Squarespace default) and SSL protocol errors. Solution:
+
+Diagnosis: Identified that the errors were due to DNS propagation delays and browser caching (the domain was correctly pointing to Netlify, verified via dig and curl diagnostics).
+Fix: Advised the user to wait for propagation and test on a separate network (mobile data) to bypass local cache, which confirmed the site was live and secure.
+Future Recommendations
+Form Backend: Currently, the contact form is frontend-only. Recommend integrating EmailJS or Formspree to receive actual emails without a backend server.
+SEO Optimization: Add unique meta descriptions and Open Graph tags for each section to improve visibility on social media.
+Image Optimization: Convert project images to WebP format for faster load times.
