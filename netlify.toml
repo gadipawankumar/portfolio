@@ -7,6 +7,12 @@
   port = 5173
 
 [[redirects]]
+  from = "/dankleyfi/*"
+  to = "https://dankleyfidi.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
